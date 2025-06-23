@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitStop.API", "PitStop.API\PitStop.API.csproj", "{D0F56AA1-78BE-4ECF-9E5F-CFA05CFC822E}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PitStop.Web", "PitStop.Web\PitStop.Web.esproj", "{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{D0F56AA1-78BE-4ECF-9E5F-CFA05CFC822E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F56AA1-78BE-4ECF-9E5F-CFA05CFC822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F56AA1-78BE-4ECF-9E5F-CFA05CFC822E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
