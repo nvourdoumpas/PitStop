@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitStop.API", "PitStop.API\
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PitStop.Web", "PitStop.Web\PitStop.Web.esproj", "{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitStop.Core", "PitStop.Core\PitStop.Core.csproj", "{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C851ECB5-7E9B-F4DE-5268-012B63B6B45F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
