@@ -33,13 +33,13 @@ namespace PitStop.Core.Entities
         [RegularExpression(Constants.GreekOrEnglishRegexp, ErrorMessage = Constants.GreekOrEnglishError)]
         [Column("address")]
         [StringLength(500)]
-        public required string Address { get; set; }
+        public string? Address { get; set; }
 
         [Required(ErrorMessage = "Η πόλη κατοικίας είναι υποχρεωτική")]
         [RegularExpression(Constants.GreekOrEnglishRegexp, ErrorMessage = Constants.GreekOrEnglishError)]
         [Column("city")]
         [StringLength(100)]
-        public required string City { get; set; }
+        public string? City { get; set; }
 
         [Column("state")]
         [StringLength(100)]

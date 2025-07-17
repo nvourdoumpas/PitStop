@@ -12,7 +12,7 @@ using PitStop.Core;
 namespace PitStop.Core.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250713163912_CreateCustomerTable")]
+    [Migration("20250717205701_CreateCustomerTable")]
     partial class CreateCustomerTable
     {
         /// <inheritdoc />
