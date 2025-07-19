@@ -12,7 +12,7 @@ using PitStop.Core;
 namespace PitStop.Core.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250717205701_CreateCustomerTable")]
+    [Migration("20250719165704_CreateCustomerTable")]
     partial class CreateCustomerTable
     {
         /// <inheritdoc />
@@ -117,7 +117,7 @@ namespace PitStop.Core.Migrations
 
                     b.HasIndex("Telephone");
 
-                    b.ToTable("customer");
+                    b.ToTable("customer", "core");
                 });
 #pragma warning restore 612, 618
         }

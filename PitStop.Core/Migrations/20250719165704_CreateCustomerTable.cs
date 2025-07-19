@@ -12,8 +12,12 @@ namespace PitStop.Core.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "core");
+
             migrationBuilder.CreateTable(
                 name: "customer",
+                schema: "core",
                 columns: table => new
                 {
                     cus_id = table.Column<long>(type: "bigint", nullable: false)
@@ -42,16 +46,19 @@ namespace PitStop.Core.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_customer_lastname",
+                schema: "core",
                 table: "customer",
                 column: "lastname");
 
             migrationBuilder.CreateIndex(
                 name: "IX_customer_mobile",
+                schema: "core",
                 table: "customer",
                 column: "mobile");
 
             migrationBuilder.CreateIndex(
                 name: "IX_customer_telephone",
+                schema: "core",
                 table: "customer",
                 column: "telephone");
         }
@@ -60,7 +67,8 @@ namespace PitStop.Core.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "customer");
+                name: "customer",
+                schema: "core");
         }
     }
 }

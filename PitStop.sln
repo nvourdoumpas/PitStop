@@ -9,6 +9,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PitStop.Web", "PitStop.Web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitStop.Core", "PitStop.Core\PitStop.Core.csproj", "{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitStop.Encryption", "PitStop.Encryption\PitStop.Encryption.csproj", "{51503ECE-F926-48E2-9A6C-8EF241D4A150}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8017A0A4-D661-4B7A-A7F1-120C5CB7EAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51503ECE-F926-48E2-9A6C-8EF241D4A150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51503ECE-F926-48E2-9A6C-8EF241D4A150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51503ECE-F926-48E2-9A6C-8EF241D4A150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51503ECE-F926-48E2-9A6C-8EF241D4A150}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

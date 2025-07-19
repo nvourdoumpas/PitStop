@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PitStop.Core;
+using PitStop.Core.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,8 @@ builder.Services.AddControllers();
 // Postgres DB
 builder.Services.AddDbContextPool<AppDbContext>(opt =>
     opt.UseNpgsql(
-        builder.Configuration.GetConnectionString("DefaultConnection"), 
-        d => { d.MigrationsHistoryTable("__efmigrationshistory"); })
+        Util.Decrypt(builder.Configuration.GetConnectionString("DefaultConnection")), 
+        d => { d.MigrationsHistoryTable("__efmigrationshistory", "core"); })
     .EnableDetailedErrors()
 );
 
@@ -19,7 +20,6 @@ builder.Services.AddDbContextPool<AppDbContext>(opt =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
-
 
 
 var app = builder.Build();

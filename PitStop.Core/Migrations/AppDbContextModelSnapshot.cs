@@ -114,7 +114,7 @@ namespace PitStop.Core.Migrations
 
                     b.HasIndex("Telephone");
 
-                    b.ToTable("customer");
+                    b.ToTable("customer", "core");
                 });
 #pragma warning restore 612, 618
         }

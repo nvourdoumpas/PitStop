@@ -37,7 +37,7 @@ namespace PitStop.Core
         #region private static void SeedCustomerData(AppDbContext context)
         private static void SeedCustomerData(AppDbContext context)
         {
-            string[] names = { "ΑΛΕΞΑΝΔΡΟΣ", "c", "ΚΩΝΣΤΑΝΤΙΝΟΣ", "ΓΙΩΡΓΟΣ", "ΠΑΝΑΓΙΩΤΗΣ", "ΝΙΚΟΛΑΟΣ", "ΙΩΑΝΝΗΣ", "ΒΑΣΙΛΗΣ", "ΧΡΗΣΤΟΣ", "ΣΤΑΥΡΟΣ" };
+            string[] names = { "ΑΛΕΞΑΝΔΡΟΣ", "ΔΗΜΗΤΡΗΣ", "ΚΩΝΣΤΑΝΤΙΝΟΣ", "ΓΙΩΡΓΟΣ", "ΠΑΝΑΓΙΩΤΗΣ", "ΝΙΚΟΣ", "ΓΙΑΝΝΗΣ", "ΒΑΣΙΛΗΣ", "ΧΡΗΣΤΟΣ", "ΣΤΑΥΡΟΣ" };
             string[] lastnames = { "ΠΑΠΑΔΟΠΟΥΛΟΣ", "ΠΑΠΠΑΣ", "ΚΑΡΑΓΙΑΝΝΗΣ", "ΒΛΑΧΟΣ", "ΙΩΑΝΝΙΔΗΣ", "ΟΙΚΟΝΟΜΟΥ", "ΠΑΠΑΓΕΩΡΓΙΟΥ", "ΜΑΚΡΗΣ", "ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ", "ΔΗΜΟΠΟΥΛΟΣ" };
             string[] addresses = { "Λ. ΚΗΦΙΣΙΑΣ", "Λ. ΑΘΗΝΩΝ", "Λ. ΜΕΣΟΓΕΙΩΝ", "Λ. ΒΟΥΛΙΑΓΜΕΝΗΣ", "Λ. ΣΥΓΓΡΟΥ", "Λ. ΚΑΤΕΧΑΚΗ", "Λ. ΚΗΦΙΣΟΥ", "Λ. ΠΟΣΕΙΔΩΝΟΣ", "Λ. ΒΑΣΙΛΙΣΣΗΣ ΣΟΦΙΑΣ", "Λ. ΑΛΕΞΑΝΔΡΑΣ" };
 
@@ -48,7 +48,7 @@ namespace PitStop.Core
 
                 Customer customer;
                 Random random;
-                for (int i = 0; i <= 50; i++)
+                for (int i = 0; i < 50; i++)
                 {
                     customer = new Customer();
                     random = new Random();
@@ -58,7 +58,7 @@ namespace PitStop.Core
                     customer.Lastname = lastnames[random.Next(0, lastnames.Length)]; // ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ
                     customer.Address = $"{addresses[random.Next(0, lastnames.Length)]} {random.Next(1, 300)}"; // Λ. ΚΑΤΕΧΑΚΗ 32
                     customer.City = "ΑΘΗΝΑ";
-                    customer.State = "ATTIKH";
+                    customer.State = "ATTIKHΣ";
                     customer.Telephone = "216" + random.Next(1000000, 9999999); // 2161234567
                     customer.Mobile = "696" + random.Next(1000000, 9999999); // 6961234567
                     customer.Email = $"{ConvertToGreeklish(customer.Name.Substring(0, 1).ToLower())}.{ConvertToGreeklish(customer.Lastname.ToLower())}@mail.com"; // p.konstantinidis@mail.com

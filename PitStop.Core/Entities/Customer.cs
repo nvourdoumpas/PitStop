@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PitStop.Core.Entities
 {
-    [Table("customer")]
+    [Table("customer", Schema = "core")]
     public class Customer
     {
         [Key]

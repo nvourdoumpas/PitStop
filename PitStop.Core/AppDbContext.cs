@@ -15,6 +15,9 @@ namespace PitStop.Core
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Default schema
+            modelBuilder.HasDefaultSchema("core");
+
             base.OnModelCreating(modelBuilder);
 
             // Indexes
