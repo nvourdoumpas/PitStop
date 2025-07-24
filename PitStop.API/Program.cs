@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 using PitStop.Core;
 using PitStop.Core.Helpers;
@@ -42,9 +43,9 @@ builder.Services.AddSwaggerGen(options =>
         Description = "PitStop Web API for managing operations about your garage",
         Contact = new OpenApiContact
         {
-            Name = "Contact with owners",
+            Name = "Owners",
             Email = "nvourdoumpas@hotmail.com"
-        },
+        }
     });
 });
 builder.Services.AddCors();
@@ -58,7 +59,14 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "PitStop API V1");
     options.IndexStream = () => File.OpenRead("wwwroot/swagger-ui/index.html");
+});
+app.UseReDoc(options =>
+{
+    options.DocumentTitle = "PitStop API - Documentation";
+    options.SpecUrl = "/swagger/v1/swagger.json";
+    options.RoutePrefix = "redoc"; // Access it at /redoc
 });
 
 //
