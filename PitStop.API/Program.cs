@@ -8,6 +8,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+// Allowed Cors Origins by config file
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.WithOrigins(allowedOrigins ?? [])
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Postgres DB
 builder.Services.AddDbContextPool<AppDbContext>(opt =>
     opt.UseNpgsql(
@@ -34,11 +46,7 @@ app.UseSwaggerUI();
 
 //}
 
-// global cors policy
-app.UseCors(x => x
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader());
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
