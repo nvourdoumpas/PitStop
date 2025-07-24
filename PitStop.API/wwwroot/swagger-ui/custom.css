@@ -1,0 +1,141 @@
+﻿/* Hide Swagger default logo and title */
+.swagger-ui .topbar-wrapper a {
+    display: none !important;
+}
+
+/* Hide the default Swagger logo image */
+.swagger-ui .topbar-wrapper img {
+    display: none !important;
+}
+
+/* Optional: Replace topbar entirely */
+.swagger-ui .topbar {
+    background-color: #222; /* Your own brand color */
+    padding: 10px;
+}
+
+/* Customize logo */
+.swagger-ui .topbar-wrapper::before {
+    content: '';
+    background-image: url('/swagger-ui/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* Customize version badge */
+.swagger-ui .topbar .download-url-wrapper .select-label select {
+    border: 2px solid #F5911F;
+}
+
+/* Customize api version badge */
+.swagger-ui .info .title small {
+    background: #AE5F1E;
+}
+
+    /* Customize openapi spec version badge */
+    .swagger-ui .info .title small.version-stamp {
+        background-color: #F5911F;
+    }
+
+/* Customize links */
+.swagger-ui .info a {
+    color: #AE5F1E;
+}
+
+    .swagger-ui .info a:hover {
+        color: #F5911F;
+    }
+
+ /* Customize get operations colors */
+.swagger-ui .opblock.opblock-get {
+    background: rgba(63, 119, 142, .1);
+    border-color: #3F778E;
+}
+
+    .swagger-ui .opblock.opblock-get .opblock-summary {
+        border-color: #3F778E;
+    }
+
+    .swagger-ui .opblock.opblock-get .opblock-summary-method {
+        background: #3F778E;
+    }
+
+    .swagger-ui .opblock.opblock-get .tab-header .tab-item.active h4 span:after {
+        background: #3F778E;
+    }
+
+/* Customize post operations colors */
+.swagger-ui .opblock.opblock-post {
+    background: rgba(100, 144, 138, .1);
+    border-color: #64908A;
+}
+
+    .swagger-ui .opblock.opblock-post .opblock-summary {
+        border-color: #64908A;
+    }
+
+    .swagger-ui .opblock.opblock-post .opblock-summary-method {
+        background: #64908A;
+    }
+
+    .swagger-ui .opblock.opblock-post .tab-header .tab-item.active h4 span:after {
+        background: #64908A;
+    }
+
+/* Customize patch operations colors */
+.swagger-ui .opblock.opblock-patch {
+    background: rgba(132, 140, 98, .1);
+    border-color: #848c62;
+}
+
+    .swagger-ui .opblock.opblock-patch .opblock-summary {
+        border-color: #848c62;
+    }
+
+    .swagger-ui .opblock.opblock-patch .opblock-summary-method {
+        background: #848c62;
+    }
+
+    .swagger-ui .opblock.opblock-patch .tab-header .tab-item.active h4 span:after {
+        background: #848c62;
+    }
+
+/* Customize put operations colors */
+.swagger-ui .opblock.opblock-put {
+    background: rgba(99, 59, 99, .1);
+    border-color: #633B63;
+}
+
+    .swagger-ui .opblock.opblock-put .opblock-summary {
+        border-color: #633B63;
+    }
+
+    .swagger-ui .opblock.opblock-put .opblock-summary-method {
+        background: #633B63;
+    }
+
+    .swagger-ui .opblock.opblock-put .tab-header .tab-item.active h4 span:after {
+        background: #633B63;
+    }
+
+/* Customize delete operations colors */
+.swagger-ui .opblock.opblock-delete {
+    background: rgba(193, 120, 106, .1);
+    border-color: #C1786A;
+}
+
+    .swagger-ui .opblock.opblock-delete .opblock-summary {
+        border-color: #C1786A;
+    }
+
+    .swagger-ui .opblock.opblock-delete .opblock-summary-method {
+        background: #C1786A;
+    }
+
+    .swagger-ui .opblock.opblock-delete .tab-header .tab-item.active h4 span:after {
+        background: #C1786A;
+    }

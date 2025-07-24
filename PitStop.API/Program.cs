@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using PitStop.Core;
 using PitStop.Core.Helpers;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +33,20 @@ builder.Services.AddDbContextPool<AppDbContext>(opt =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "PitStop API",
+        Description = "PitStop Web API for managing operations about your garage",
+        Contact = new OpenApiContact
+        {
+            Name = "Contact with owners",
+            Email = "nvourdoumpas@hotmail.com"
+        },
+    });
+});
 builder.Services.AddCors();
 
 
@@ -40,7 +56,10 @@ var app = builder.Build();
 //if (app.Environment.IsDevelopment())
 //{
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(options =>
+{
+    options.IndexStream = () => File.OpenRead("wwwroot/swagger-ui/index.html");
+});
 
 //
 
@@ -51,6 +70,8 @@ app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseStaticFiles();
 
 app.MapControllers();
 
