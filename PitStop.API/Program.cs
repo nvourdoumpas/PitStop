@@ -60,13 +60,14 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "PitStop API V1");
-    options.IndexStream = () => File.OpenRead("wwwroot/swagger-ui/index.html");
+    options.RoutePrefix = "specification";
+    options.IndexStream = () => File.OpenRead(Path.Combine(app.Environment.WebRootPath, "swagger-ui", "index.html"));
 });
 app.UseReDoc(options =>
 {
-    options.DocumentTitle = "PitStop API - Documentation";
     options.SpecUrl = "/swagger/v1/swagger.json";
-    options.RoutePrefix = "redoc"; // Access it at /redoc
+    options.RoutePrefix = "documentation";
+    options.IndexStream = () => File.OpenRead(Path.Combine(app.Environment.WebRootPath, "redoc-ui", "index.html"));
 });
 
 //

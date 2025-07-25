@@ -5,9 +5,9 @@
         //info.appendChild(br);
 
         link = document.createElement('a');
-        link.text = 'View PitStop Documentation';
+        link.text = 'View PitStop API Documentation';
         link.target = '_blank';
-        link.href = '../redoc';
+        link.href = '../documentation';
         link.className = 'link';
 
         description.appendChild(link);

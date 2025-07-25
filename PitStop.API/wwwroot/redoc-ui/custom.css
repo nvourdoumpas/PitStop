@@ -1,0 +1,43 @@
+﻿body {
+    margin: 0;
+    font-family: sans-serif
+}
+
+.logo-header {
+    background: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .logo-header img {
+        height: 40px;
+    }
+
+/*body {*/
+    /*background-color: #ffffff;
+    font-family: "Segoe UI", sans-serif;*/
+/*}*/
+
+/* Logo in top bar (fallback in case ReDoc theme doesn't apply it) */
+/*.redoc-wrap::before {
+    content: "";
+    display: block;
+    height: 60px;
+    background: url('../logo.png') no-repeat left center;
+    background-size: contain;
+    margin-bottom: 10px;
+}*/
+
+/* Override some colors */
+/*.redoc-wrap h1,
+.redoc-wrap h2,
+.redoc-wrap h3 {*/
+    /*color: #1e88e5;*/
+/*}*/
+
+/*.redoc-logo img {
+    width: 180px !important;
+    height: auto !important;
+    object-fit: contain;
+    padding: 10px 0;
+}*/

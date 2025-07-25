@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\swagger-ui\favicon.ico" />
-    <None Include="wwwroot\swagger-ui\logo.png" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\logo.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,7 +17,7 @@
 /* Customize logo */
 .swagger-ui .topbar-wrapper::before {
     content: '';
-    background-image: url('/swagger-ui/logo.png');
+    background-image: url('../logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 250px;
